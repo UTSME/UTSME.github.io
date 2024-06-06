@@ -15,12 +15,10 @@ To add a new Markdown page to the knowledgebase:
 2. **Include Necessary Front Matter:**
     
     - At the top of your file, include the following front matter:
-        
-        markdown
-        
-        Copy code
-        
-        `--- layout: page title: Title of Your Page ---`
+        ```---
+        layout: page
+        title: Title of Your Page
+        ---```
         
     - Replace `"Title of Your Page"` with the actual title you want for the web page.
 3. **Write Your Content:**
