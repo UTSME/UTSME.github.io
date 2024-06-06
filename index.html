@@ -1,1 +1,105 @@
-Hello World
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>UTS:ME Knowledgebase Website</title>
+        <link rel="stylesheet" href="styles.css" />
+        <style>
+            /* Basic styling for layout */
+            body {
+                display: grid;
+                grid-template-areas:
+                    "header header"
+                    "sidebar main"
+                    "footer footer";
+                grid-template-columns: 1fr 3fr;
+                grid-template-rows: auto 1fr auto;
+                margin: 0;
+                min-height: 100vh;
+                font-family: Arial, sans-serif;
+            }
+
+            header {
+                grid-area: header;
+                background-color: #4caf50;
+                color: white;
+                padding: 1rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            #logo {
+                font-size: 1.5rem;
+                font-weight: bold;
+            }
+
+            nav {
+                display: flex;
+                gap: 1rem;
+            }
+
+            nav a {
+                color: white;
+                text-decoration: none;
+            }
+
+            sidebar {
+                grid-area: sidebar;
+                background-color: #f4f4f4;
+                padding: 1rem;
+            }
+
+            main {
+                grid-area: main;
+                padding: 1rem;
+            }
+
+            footer {
+                grid-area: footer;
+                background-color: #4caf50;
+                color: white;
+                text-align: center;
+                padding: 1rem;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div id="logo">UTS:ME Software</div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="articles.html">Articles</a>
+                <a href="faq.html">FAQ</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </header>
+
+        <sidebar>
+            <h2>Categories</h2>
+            <ul>
+                <li><a href="categories/telem.html">Telemetry</a></li>
+                <li>
+                    <a href="categories/servers.html">Servers and Computers</a>
+                </li>
+                <li>
+                    <a href="categories/oncarcomputers.html"
+                        >Main Car Computer</a
+                    >
+                </li>
+                <li><a href="categories/category4.html">Category 4</a></li>
+            </ul>
+        </sidebar>
+
+        <main>
+            <h1>Welcome to our knowledgebase</h1>
+            <p>
+                This is a knowledgebase website. You can find useful information
+                here.
+            </p>
+        </main>
+
+        <footer>&copy; 2024 UTS:ME Team</footer>
+    </body>
+</html>

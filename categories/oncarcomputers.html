@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Markdown Page</title>
+        <!-- Include CSS for styling -->
+        <link rel="stylesheet" href="styles.css" />
+        <!-- Your custom styles if needed -->
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 20px;
+                background-color: #f8f8f8;
+                color: #333;
+            }
+            #content {
+                background-color: white;
+                padding: 20px;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+        </style>
+    </head>
+    <body>
+        <div id="content"></div>
+
+        <!-- Include marked.js library from CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <script>
+            // Example Markdown content
+            const markdownContent = `
+# Page Title
+
+Some introductory text.
+
+## Section 1
+
+- Item 1
+- Item 2
+- Item 3
+
+### Subsection
+
+Some more detailed information here.
+
+## Section 2
+
+Another section with **bold text** and *italic text*.
+
+[Link to another page](#)
+
+\`\`\`javascript
+// Sample code block
+console.log("Hello, World!");
+\`\`\`
+        `;
+
+            // Convert Markdown to HTML and insert it into the content div
+            document.getElementById("content").innerHTML =
+                marked(markdownContent);
+        </script>
+    </body>
+</html>
